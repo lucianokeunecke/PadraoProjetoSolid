@@ -1,20 +1,26 @@
 package br.com.infnet.PadraoProjetoSolid.enumerator;
 
+import br.com.infnet.PadraoProjetoSolid.service.RegraReajusteSalarioService;
+import br.com.infnet.PadraoProjetoSolid.service.impl.RegraReajusteSalarioServiceEstagiarioImpl;
+import br.com.infnet.PadraoProjetoSolid.service.impl.RegraReajusteSalarioServiceJuniorImpl;
+import br.com.infnet.PadraoProjetoSolid.service.impl.RegraReajusteSalarioServicePlenoImpl;
+import br.com.infnet.PadraoProjetoSolid.service.impl.RegraReajusteSalarioServiceSeniorImpl;
+
 public enum EnumCargo {
 
-    ESTAGIARIO((byte) 1),
-    JUNIOR((byte) 2),
-    PLENO ((byte) 3),
-    SENIOR((byte) 4);
+    ESTAGIARIO(new RegraReajusteSalarioServiceEstagiarioImpl()),
+    JUNIOR(new RegraReajusteSalarioServiceJuniorImpl()),
+    PLENO (new RegraReajusteSalarioServicePlenoImpl()),
+    SENIOR(new RegraReajusteSalarioServiceSeniorImpl());
 
-    private final byte valor;
-
-    EnumCargo(byte valorOpcao) {
-        valor = valorOpcao;
+    EnumCargo(RegraReajusteSalarioService reajusteSalarioService) {
+        this.reajusteSalarioService = reajusteSalarioService;
     }
 
-    public byte getValor() {
-        return valor;
+    private RegraReajusteSalarioService reajusteSalarioService;
+
+    public RegraReajusteSalarioService getRegraReajusteSalario() {
+        return this.reajusteSalarioService;
     }
 
 }

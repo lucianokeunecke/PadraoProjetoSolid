@@ -7,10 +7,11 @@ import java.math.BigDecimal;
 
 public class RegraReajusteSalarioServicePlenoImpl implements RegraReajusteSalarioService {
     @Override
-    public void calcular(FuncionarioCLT funcionarioCLT) {
+    public BigDecimal calcular(FuncionarioCLT funcionarioCLT) {
+        BigDecimal valorSalario = funcionarioCLT.getDadosFuncionario().getSalarioBase();
         if (funcionarioCLT.getDadosFuncionario().EhCargoPleno()) {
-            BigDecimal valorSalario = funcionarioCLT.getDadosFuncionario().getSalarioBase();
-            funcionarioCLT.getDadosFuncionario().setSalarioBase(valorSalario.add(valorSalario.multiply(new BigDecimal("0.15"))));
+            return valorSalario.add(valorSalario.multiply(new BigDecimal("0.15")));
         }
+        return valorSalario;
     }
 }
