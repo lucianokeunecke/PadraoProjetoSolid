@@ -8,4 +8,7 @@ import lombok.Setter;
 public class TelefoneFuncionario {
 
     private String numeroTelefone;
+    public TelefoneFuncionario(String numeroTelefone) {
+        this.numeroTelefone = numeroTelefone;
+    }
 }

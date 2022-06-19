@@ -19,4 +19,18 @@ public class DadosFuncionario {
     private EnumCargo cargo;
     private List<TelefoneFuncionario> listaTefefones;
 
+    public Boolean EhCargoEstagiario() {
+        return this.getCargo() == EnumCargo.ESTAGIARIO;
+    }
+    public Boolean EhCargoJunior() {
+        return this.getCargo() == EnumCargo.JUNIOR;
+    }
+
+    public Boolean EhCargoPleno() {
+        return this.getCargo() == EnumCargo.PLENO;
+    }
+
+    public Boolean EhCargoSenior() {
+        return this.getCargo() == EnumCargo.SENIOR;
+    }
 }
