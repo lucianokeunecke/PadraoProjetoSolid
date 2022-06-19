@@ -14,6 +14,6 @@ public class ReajusteSalarioServiceImpl {
 
     public void ReajustarSalario(FuncionarioCLT funcionarioCLT) {
         this.listaValidacoes.forEach(validacao -> validacao.validar(funcionarioCLT));
-        funcionarioCLT.getDadosFuncionario().setSalarioBase(funcionarioCLT.getDadosFuncionario().getCargo().getRegraReajusteSalario().calcular(funcionarioCLT));
+        funcionarioCLT.ReajusteSalario(funcionarioCLT.getDadosFuncionario().getCargo().getRegraReajusteSalario().calcular(funcionarioCLT));
     }
 }
