@@ -22,27 +22,21 @@ public class PadraoProjetoSolidApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PadraoProjetoSolidApplication.class, args);
-		FuncionarioCLT funcionarioCLT = new FuncionarioCLT();
-		funcionarioCLT.getDadosFuncionario().setNome("José Aparecido");
 
 		List<TelefoneFuncionario> listaTelefones = Arrays.asList(
 				new TelefoneFuncionario("(41) 9 9223-2843"),
 				new TelefoneFuncionario("(41) 9 9299-0213")
 		);
 
-		funcionarioCLT.getDadosFuncionario().setListaTefefones(listaTelefones);
-		funcionarioCLT.getDadosFuncionario().setEndereco("Rua Fulano, 820, São Paulo, SP");
-		funcionarioCLT.getDadosFuncionario().setCargo(EnumCargo.PLENO);
-		funcionarioCLT.getDadosFuncionario().setSetor(EnumSetor.DESENVOLVIMENTO);
-		funcionarioCLT.getDadosFuncionario().setSalarioBase(new BigDecimal("2500"));
+		FuncionarioCLT funcionarioCLT = new FuncionarioCLT("José Aparecido", "Rua Fulano, 820, São Paulo, SP", new BigDecimal("2500"), EnumSetor.DESENVOLVIMENTO, EnumCargo.PLENO, listaTelefones);
 
 		List<RegraReajusteSalarioValidation> listaRegrasReajusteSalario = Arrays.asList(new RegraReajusteSalarioEstagiarioValidationImpl(),
 																						new RegraReajusteSalarioJuniorValidationImpl(),
 																						new RegraReajusteSalarioPlenoValidationImpl(),
 																						new RegraReajusteSalarioSeniorValidationImpl());
 
-		ReajusteSalarioServiceImpl reajusteSalarioService = new ReajusteSalarioServiceImpl(listaRegrasReajusteSalario);
-		reajusteSalarioService.ReajustarSalario(funcionarioCLT);
+		ReajusteSalarioServiceImpl reajusteSalarioService = new ReajusteSalarioServiceImpl(listaRegrasReajusteSalario, funcionarioCLT);
+		reajusteSalarioService.ReajustarSalario();
 		System.out.println(funcionarioCLT.getDadosFuncionario().getSalarioBase());
 	}
 
