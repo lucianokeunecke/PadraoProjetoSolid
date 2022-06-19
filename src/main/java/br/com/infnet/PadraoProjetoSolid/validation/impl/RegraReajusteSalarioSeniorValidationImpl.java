@@ -12,7 +12,7 @@ public class RegraReajusteSalarioSeniorValidationImpl implements RegraReajusteSa
     public void validar(FuncionarioCLT funcionarioCLT) {
 
         if (funcionarioCLT.getDadosFuncionario().EhCargoSenior()
-         && funcionarioCLT.getDadosFuncionario().getSalario().compareTo(new BigDecimal("5000")) > 0) {
+         && funcionarioCLT.getDadosFuncionario().getSalarioBase().compareTo(new BigDecimal("5000")) > 0) {
             throw new LancaExcecao("O salário base do sênior não pode ser maior que R$ 5.000,00 reais.");
         }
     }

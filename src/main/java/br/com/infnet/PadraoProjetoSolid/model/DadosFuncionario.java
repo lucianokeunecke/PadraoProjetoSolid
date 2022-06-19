@@ -14,7 +14,7 @@ public class DadosFuncionario {
 
     private String nome;
     private String endereco;
-    private BigDecimal salario;
+    private BigDecimal salarioBase;
     private EnumSetor setor;
     private EnumCargo cargo;
     private List<TelefoneFuncionario> listaTefefones;

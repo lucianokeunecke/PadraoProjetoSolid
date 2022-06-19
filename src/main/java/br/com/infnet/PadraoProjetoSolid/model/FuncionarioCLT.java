@@ -12,7 +12,7 @@ public class FuncionarioCLT {
     private DadosFuncionario dadosFuncionario;
 
     public void reajusteSalario(BigDecimal novoSalario) {
-        this.dadosFuncionario.setSalario(novoSalario);
+        this.dadosFuncionario.setSalarioBase(novoSalario);
     }
 
     public FuncionarioCLT () {

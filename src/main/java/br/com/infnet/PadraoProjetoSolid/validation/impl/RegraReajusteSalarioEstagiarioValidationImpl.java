@@ -12,7 +12,7 @@ public class RegraReajusteSalarioEstagiarioValidationImpl implements RegraReajus
     public void validar(FuncionarioCLT funcionarioCLT) {
 
         if (funcionarioCLT.getDadosFuncionario().EhCargoEstagiario()
-         && funcionarioCLT.getDadosFuncionario().getSalario().compareTo(new BigDecimal("1000")) > 0) {
+         && funcionarioCLT.getDadosFuncionario().getSalarioBase().compareTo(new BigDecimal("1000")) > 0) {
             throw new LancaExcecao("O salário base do estagiário não pode ser maior que R$ 1.000,00 reais.");
         }
     }
