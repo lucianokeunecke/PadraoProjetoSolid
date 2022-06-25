@@ -9,7 +9,7 @@ public class ReajusteSalarioServiceImpl {
     private List<RegraReajusteSalarioValidation> listaValidacoes;
     private FuncionarioCLT funcionarioCLT;
 
-    public reajusteSalarioServiceImpl(List<RegraReajusteSalarioValidation> listaValidacoes, FuncionarioCLT funcionarioCLT) {
+    public ReajusteSalarioServiceImpl(List<RegraReajusteSalarioValidation> listaValidacoes, FuncionarioCLT funcionarioCLT) {
         this.listaValidacoes = listaValidacoes;
         this.funcionarioCLT = funcionarioCLT;
     }
