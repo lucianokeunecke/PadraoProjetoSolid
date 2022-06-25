@@ -9,12 +9,12 @@ public class ReajusteSalarioServiceImpl {
     private List<RegraReajusteSalarioValidation> listaValidacoes;
     private FuncionarioCLT funcionarioCLT;
 
-    public ReajusteSalarioServiceImpl(List<RegraReajusteSalarioValidation> listaValidacoes, FuncionarioCLT funcionarioCLT) {
+    public reajusteSalarioServiceImpl(List<RegraReajusteSalarioValidation> listaValidacoes, FuncionarioCLT funcionarioCLT) {
         this.listaValidacoes = listaValidacoes;
         this.funcionarioCLT = funcionarioCLT;
     }
 
-    public void ReajustarSalario() {
+    public void reajustarSalario() {
         this.listaValidacoes.forEach(validacao -> validacao.validar(funcionarioCLT));
         this.funcionarioCLT.reajusteSalario();
     }
