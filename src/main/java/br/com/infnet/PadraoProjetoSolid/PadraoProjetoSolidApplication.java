@@ -37,7 +37,7 @@ public class PadraoProjetoSolidApplication {
 																						new RegraReajusteSalarioSeniorValidationImpl());
 
 		ReajusteSalarioServiceImpl reajusteSalarioService = new ReajusteSalarioServiceImpl(listaRegrasReajusteSalario, funcionarioCLT);
-		reajusteSalarioService.ReajustarSalario();
+		reajusteSalarioService.reajustarSalario();
 		System.out.println(funcionarioCLT.getDadosFuncionario().getSalarioBase());
 
 
@@ -49,7 +49,7 @@ public class PadraoProjetoSolidApplication {
 
 		FuncionarioPJ funcionarioPJ = new FuncionarioPJ("Carlos Gomes", "Rua Teste, 986, Curitiba, PR", new BigDecimal("3500"), EnumSetor.DESENVOLVIMENTO, EnumCargo.SENIOR, listaTelefonesPJ);
 		ReajusteSalarioServiceImpl reajusteSalarioPJService = new ReajusteSalarioServiceImpl(listaRegrasReajusteSalario, funcionarioPJ);
-		reajusteSalarioService.ReajustarSalario();
+		reajusteSalarioService.reajustarSalario();
 		System.out.println(funcionarioPJ.getDadosFuncionario().getSalarioBase());*/
 	}
 

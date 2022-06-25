@@ -10,7 +10,7 @@ public class RegraReajusteSalarioServiceEstagiarioImpl implements RegraReajusteS
     @Override
     public BigDecimal calcular(FuncionarioCLT funcionarioCLT) {
         BigDecimal valorSalario = funcionarioCLT.getDadosFuncionario().getSalarioBase();
-        if (funcionarioCLT.getDadosFuncionario().EhCargoEstagiario()) {
+        if (funcionarioCLT.getDadosFuncionario().ehCargoEstagiario()) {
             return valorSalario.multiply(new BigDecimal("0.25"));
         }
         return valorSalario;

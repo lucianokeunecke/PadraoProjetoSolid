@@ -11,7 +11,7 @@ public class RegraReajusteSalarioPlenoValidationImpl implements RegraReajusteSal
     @Override
     public void validar(FuncionarioCLT funcionarioCLT) {
 
-        if (funcionarioCLT.getDadosFuncionario().EhCargoPleno()
+        if (funcionarioCLT.getDadosFuncionario().ehCargoPleno()
                 && funcionarioCLT.getDadosFuncionario().getSalarioBase().compareTo(new BigDecimal("3000")) > 0) {
             throw new LancaExcecao("O salário base do pleno não pode ser maior que R$ 3000 reais.");
         }

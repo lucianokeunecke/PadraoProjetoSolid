@@ -11,7 +11,7 @@ public class RegraReajusteSalarioJuniorValidationImpl implements RegraReajusteSa
     @Override
     public void validar(FuncionarioCLT funcionarioCLT) {
 
-        if (funcionarioCLT.getDadosFuncionario().EhCargoJunior()
+        if (funcionarioCLT.getDadosFuncionario().ehCargoJunior()
          && funcionarioCLT.getDadosFuncionario().getSalarioBase().compareTo(new BigDecimal("1500")) > 0) {
             throw new LancaExcecao("O salário base do júnior não pode ser maior que R$ 1.500,00 reais.");
         }
