@@ -16,7 +16,9 @@ public class FuncionarioPJ {
     private String empresaContratada;
     private Long diasPrevistoPermanencia;
 
-    public FuncionarioPJ(String nome, String endereco, BigDecimal salarioBase, EnumSetor setor, EnumCargo cargo, List<TelefoneFuncionario> listaTefefones) {
+    public FuncionarioPJ(String nome, String endereco, BigDecimal salarioBase, EnumSetor setor, EnumCargo cargo, List<TelefoneFuncionario> listaTefefones, String empresaContratada, Long diasPrevistoPermanencia) {
+        this.empresaContratada = empresaContratada;
+        this.diasPrevistoPermanencia = diasPrevistoPermanencia;
         this.dadosFuncionario = new DadosFuncionario(nome, endereco, salarioBase, setor, cargo, listaTefefones);
     }
 }

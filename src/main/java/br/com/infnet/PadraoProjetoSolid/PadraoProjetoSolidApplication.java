@@ -47,7 +47,7 @@ public class PadraoProjetoSolidApplication {
 				new TelefoneFuncionario("(41) 9 9299-0213")
 		);
 
-		FuncionarioPJ funcionarioPJ = new FuncionarioPJ("Carlos Gomes", "Rua Teste, 986, Curitiba, PR", new BigDecimal("3500"), EnumSetor.DESENVOLVIMENTO, EnumCargo.SENIOR, listaTelefonesPJ);
+		FuncionarioPJ funcionarioPJ = new FuncionarioPJ("Carlos Gomes", "Rua Teste, 986, Curitiba, PR", new BigDecimal("3500"), EnumSetor.DESENVOLVIMENTO, EnumCargo.SENIOR, listaTelefonesPJ, "Empresa Teste", 365);
 		ReajusteSalarioServiceImpl reajusteSalarioPJService = new ReajusteSalarioServiceImpl(listaRegrasReajusteSalario, funcionarioPJ);
 		reajusteSalarioService.reajustarSalario();
 		System.out.println(funcionarioPJ.getDadosFuncionario().getSalarioBase());*/
