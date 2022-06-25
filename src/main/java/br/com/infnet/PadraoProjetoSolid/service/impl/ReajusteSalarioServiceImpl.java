@@ -16,6 +16,6 @@ public class ReajusteSalarioServiceImpl {
 
     public void ReajustarSalario() {
         this.listaValidacoes.forEach(validacao -> validacao.validar(funcionarioCLT));
-        this.funcionarioCLT.ReajusteSalario();
+        this.funcionarioCLT.reajusteSalario();
     }
 }

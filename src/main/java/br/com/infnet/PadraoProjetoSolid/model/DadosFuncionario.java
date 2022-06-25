@@ -3,7 +3,6 @@ package br.com.infnet.PadraoProjetoSolid.model;
 import br.com.infnet.PadraoProjetoSolid.enumerator.EnumCargo;
 import br.com.infnet.PadraoProjetoSolid.enumerator.EnumSetor;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -31,18 +30,18 @@ public class DadosFuncionario {
         this.salarioBase = novoSalario;
     }
 
-    public Boolean EhCargoEstagiario() {
+    public Boolean ehCargoEstagiario() {
         return this.getCargo() == EnumCargo.ESTAGIARIO;
     }
-    public Boolean EhCargoJunior() {
+    public Boolean ehCargoJunior() {
         return this.getCargo() == EnumCargo.JUNIOR;
     }
 
-    public Boolean EhCargoPleno() {
+    public Boolean ehCargoPleno() {
         return this.getCargo() == EnumCargo.PLENO;
     }
 
-    public Boolean EhCargoSenior() {
+    public Boolean ehCargoSenior() {
         return this.getCargo() == EnumCargo.SENIOR;
     }
 }

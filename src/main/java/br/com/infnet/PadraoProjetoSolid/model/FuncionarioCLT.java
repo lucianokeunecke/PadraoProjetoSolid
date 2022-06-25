@@ -18,7 +18,7 @@ public class FuncionarioCLT {
         this.dadosFuncionario = new DadosFuncionario(nome, endereco, salarioBase, setor, cargo, listaTefefones);
     }
 
-    public void ReajusteSalario() {
+    public void reajusteSalario() {
         this.dadosFuncionario.setSalario(this.dadosFuncionario.getCargo().getRegraReajusteSalario().calcular(this));
     }
 

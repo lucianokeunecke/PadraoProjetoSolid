@@ -1,6 +1,6 @@
 package br.com.infnet.PadraoProjetoSolid.validation.impl;
 
-import br.com.infnet.PadraoProjetoSolid.exception.LancaExcecao;
+import br.com.infnet.PadraoProjetoSolid.exception.LancarMensagemExcecao;
 import br.com.infnet.PadraoProjetoSolid.model.FuncionarioCLT;
 import br.com.infnet.PadraoProjetoSolid.validation.RegraReajusteSalarioValidation;
 
@@ -11,9 +11,9 @@ public class RegraReajusteSalarioEstagiarioValidationImpl implements RegraReajus
     @Override
     public void validar(FuncionarioCLT funcionarioCLT) {
 
-        if (funcionarioCLT.getDadosFuncionario().EhCargoEstagiario()
+        if (funcionarioCLT.getDadosFuncionario().ehCargoEstagiario()
          && funcionarioCLT.getDadosFuncionario().getSalarioBase().compareTo(new BigDecimal("1000")) > 0) {
-            throw new LancaExcecao("O salário base do estagiário não pode ser maior que R$ 1.000,00 reais.");
+            throw new LancarMensagemExcecao("O salário base do estagiário não pode ser maior que R$ 1.000,00 reais.");
         }
     }
 }
