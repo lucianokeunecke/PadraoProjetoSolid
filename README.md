@@ -6,6 +6,6 @@ Alunos:
 
 - Luciano Keunecke
 
-Itens de entrega:
+Item de entrega:
 
-- Utilizar os princípios de SOLID e Clean Code;
+- Utilizar os princípios de SOLID e Clean Code.
